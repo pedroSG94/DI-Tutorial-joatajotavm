@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">InyeccionDependencias</string>
+    <string name="texto">hola mundo</string>
+    <string name="texto2">hola mundo2</string>
+</resources>
