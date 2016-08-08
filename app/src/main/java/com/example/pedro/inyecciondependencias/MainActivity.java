@@ -12,6 +12,8 @@ import com.example.pedro.inyecciondependencias.di.Empresa;
 import com.example.pedro.inyecciondependencias.dijava.ConInyeccion;
 import com.example.pedro.inyecciondependencias.dijava.Programador;
 import com.example.pedro.inyecciondependencias.dijava.SinInyeccion;
+import com.example.pedro.inyecciondependencias.otherviews.CustomAdapter;
+import com.example.pedro.inyecciondependencias.otherviews.CustomDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,12 +75,16 @@ public final class MainActivity extends AppCompatActivity{
         ConInyeccion conInyeccion2 = new ConInyeccion(new Programador("pedro"));
     }
 
-    @OnLongClick({R.id.button, R.id.button4})
+    @OnLongClick({R.id.button, R.id.button4, R.id.button2})
     public boolean onClick(View v) {
         switch (v.getId()){
             case R.id.button:
                 buttons.get(0).setBackgroundColor(amarillo);
                 Toast.makeText(MainActivity.this, programador4.toString(), Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.button2:
+                CustomDialog dialog = new CustomDialog(MainActivity.this);
+                dialog.show();
                 return true;
             case R.id.button4:
                 buttons.get(3).setText(holaMundo2);
